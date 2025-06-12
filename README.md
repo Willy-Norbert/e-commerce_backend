@@ -1,4 +1,4 @@
-# WomXchange Rwanda: E-Commerce Platform for Women Entrepreneurs
+wi# WomXchange Rwanda: E-Commerce Platform for Women Entrepreneurs
 
 ## Description
 WomXchange Rwanda is a free and easy-to-use online platform designed to help women entrepreneurs in Kigali sell their products, manage orders, and grow their businesses. It provides simple tools for both sellers and buyers, including a chatbot for support, product management, order tracking, and an integrated payment system via MoMoPay (Mobile Money). The platform supports both English and Kinyarwanda, making it more accessible to a wide range of users.
@@ -122,10 +122,6 @@ npm run dev
 
 ```
 ---
-##  Designs & Visuals
-
-This section includes the design mockups, UI screenshots, and architecture diagrams used for this e-commerce app.
-
 ### UI/UX Design (Figma)
 
 The user interface and experience of WomXchange Rwanda were thoughtfully designed using Figma, a collaborative design tool that allows for fast prototyping and clear communication of interface concepts.
@@ -187,4 +183,3 @@ App Type: Web Service (Node.js)
 
 ---
 
- The project is now live and accessible via the provided Vercel frontend link, communicating securely with the Render backend and PostgreSQL database.
