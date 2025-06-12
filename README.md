@@ -35,13 +35,13 @@ WomXchange Rwanda is a free and easy-to-use online platform designed to help wom
 
 - Chatbot support for order tracking, product queries, etc.
 
-3. Chatbot:
+3. **Chatbot**:
 
--A fixed, floating component that provides product suggestions, order   tracking, and answers to frequently asked questions.
+- A fixed, floating component that provides product suggestions, order   tracking, and answers to frequently asked questions.
 
 4. Payment Integration:
 
-Supports MoMoPay for payments through the MTN MoMo API.
+- Supports MoMoPay for payments through the MTN MoMo API.
 
 5. Language Support:
 
@@ -54,7 +54,7 @@ Supports MoMoPay for payments through the MTN MoMo API.
 - **Auth**: JWT-based authentication and role-based access for `Admin`, `Vendor`, and `Client`
 - **Open AI**: api for chartbort
 
-The app includes:
+**The app includes:**
 - Full product order flow
 - Admin & Vendor dashboards
 - Protected routes with role restrictions
@@ -62,9 +62,9 @@ The app includes:
 
 ---
 
-## 🔗 GitHub Repository
+##  GitHub Repository
 
-👉 [GitHub Repo Link](https://github.com/your-username/ecommerce-fullstack-app)
+ [GitHub Repo Link](https://github.com/Beritha-n12/womxchange_e_commerce.git)
 
 ---
 
