@@ -104,22 +104,22 @@ This section includes the design mockups, UI screenshots, and architecture diagr
 ###  App Screenshots
 
 ####  Home Page
-![Home](./screenshots/home.png)
+![Home](Frontend/public/screenshots/home.png)
 
 ####  Product Page
-![Product](./screenshots/product.png)
+![Product](Frontend/public/screenshots/product.png)
 
 ####  Checkout Page
-![Checkout](./screenshots/checkout.png)
+![Checkout](Frontend/public/screenshots/checkout.png)
 
 ####  Cart Page
-![Cart](./screenshots/cart.png)
+![Cart](Frontend/public/screenshots/cart.png)
 
 ####  Admin Dashboard
-![Admin](./screenshots/admin.png)
+![Admin](Frontend/public/screenshots/admin.png)
 
-####  Vendor Dashboard
-![Vendor](./screenshots/vendor.png)
+####  Vendor page
+![Vendor](Frontend/public/screenshots/vendor.png)
 
  ---
 
