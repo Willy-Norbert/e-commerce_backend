@@ -1,8 +1,9 @@
-# 🛒 E-Commerce FullStack Application
+# WomXchange Rwanda: E-Commerce Platform for Women Entrepreneurs
 
-wXc is a complete **FullStack E-Commerce platform** built with:
- **Description**
-wXc (Women Exchange) is a modern, full-featured  **E-Commerce platform for clothing and fashion products**, built with a robust **PostgreSQL + Node.js backend** and a responsive **React + TypeScript frontend**. It supports three key user roles:
+## Description
+WomXchange Rwanda is a free and easy-to-use online platform designed to help women entrepreneurs in Kigali sell their products, manage orders, and grow their businesses. It provides simple tools for both sellers and buyers, including a chatbot for support, product management, order tracking, and an integrated payment system via MoMoPay (Mobile Money). The platform supports both English and Kinyarwanda, making it more accessible to a wide range of users.
+ three key user roles:
+ 
 
 - **Admins**: Oversee vendors, manage users, track sales and reports
 - **Vendors**: Upload and manage clothing items, handle customer orders
