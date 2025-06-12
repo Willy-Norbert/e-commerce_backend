@@ -1,29 +1,33 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('../config/db');
+const bcrypt = require('bcrypt');
 
-const userSchema = mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  role: {
-    type: String,
-    enum: ['admin', 'vendor', 'client'],
-    default: 'client',
+const User = sequelize.define('User', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
   },
-}, { timestamps: true });
-
-// Password hashing middleware
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) next();
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  name: { type: DataTypes.STRING, allowNull: false },
+  email: { type: DataTypes.STRING, allowNull: false, unique: true },
+  password: { type: DataTypes.STRING, allowNull: false },
+  role: { 
+    type: DataTypes.ENUM('admin', 'vendor', 'client'), 
+    defaultValue: 'client',
+  },
+}, {
+  tableName: 'users',
+  timestamps: true,
+  hooks: {
+    beforeCreate: async (user) => {
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(user.password, salt);
+    },
+  },
 });
 
-// Method to compare entered password with hashed password
-userSchema.methods.matchPassword = async function(enteredPassword) {
+User.prototype.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
-
-const User = mongoose.model('User', userSchema);
 
 module.exports = User;

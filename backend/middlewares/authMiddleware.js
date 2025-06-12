@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/userModel');
+const { User } = require('../models');
+
+require('dotenv').config();
 
 const protect = async (req, res, next) => {
   let token;
@@ -10,27 +12,28 @@ const protect = async (req, res, next) => {
   ) {
     try {
       token = req.headers.authorization.split(' ')[1];
+
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      req.user = await User.findById(decoded.id).select('-password');
+      const user = await User.findByPk(decoded.id);
+      if (!user) return res.status(401).json({ message: 'Not authorized' });
+
+      req.user = user;
       next();
     } catch (error) {
-      res.status(401).json({ message: 'Not authorized, token failed' });
+      return res.status(401).json({ message: 'Not authorized, token failed' });
     }
   }
 
   if (!token) {
-    return res.status(401).json({ message: 'Not authorized, no token' });
+    return res.status(401).json({ message: 'No token, authorization denied' });
   }
 };
 
-// Role-based authorization middleware
 const authorizeRoles = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      return res
-        .status(403)
-        .json({ message: `Role (${req.user.role}) is not authorized` });
+      return res.status(403).json({ message: 'Forbidden: insufficient rights' });
     }
     next();
   };
