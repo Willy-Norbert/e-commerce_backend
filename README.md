@@ -75,17 +75,17 @@ Follow these steps to run the full project locally:
 ### Prerequisites
 
 - **Node.js** (v18+ recommended)
-- **npm** or **yarn**
+- **npm**
 - **PostgreSQL** installed and running
 - **Git** installed
 - Optional: **Sequelize CLI** for DB migrations
 
 ---
 
-### 📦 1. Clone the Repository
+###  1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ecommerce-clothing-app.git
+git clone https://github.com/Beritha-n12/womxchange_e_commerce.git
 cd ecommerce-clothing-app
 ```
 ```bash
@@ -126,71 +126,62 @@ npm run dev
 
 This section includes the design mockups, UI screenshots, and architecture diagrams used for this e-commerce app.
 
-###  Figma Mockups
+### UI/UX Design (Figma)
 
-> Click the link below to view the full UI design and wireframes:
-- [Figma Mockup](https://www.figma.com/file/your-design-link/ecommerce-clothing-app?type=design&node-id=0%3A1)
+The user interface and experience of WomXchange Rwanda were thoughtfully designed using Figma, a collaborative design tool that allows for fast prototyping and clear communication of interface concepts.
+What’s Included in the Figma Design:
+Admin Dashboard UI — showing analytics, user data, product stats, and sales performance
 
----
+**Seller Portal** — for uploading products, viewing orders, and managing inventory
 
-<!-- Beritha  Make sure you store these images in the `frontend/public/screenshots/` folder and reference them correctly in your repo. -->
-###  App Screenshots
 
-####  Home Page
-![Home](Frontend/public/screenshots/home.png)
+**Buyer Pages** — product listings, cart view, checkout interface
 
-####  Product Page
-![Product](Frontend/public/screenshots/product.png)
 
-####  Checkout Page
-![Checkout](Frontend/public/screenshots/checkout.png)
+**Authentication Pages** — login/signup interfaces with support for English and Kinyarwanda
 
-####  Cart Page
-![Cart](Frontend/public/screenshots/cart.png)
 
-####  Admin Dashboard
-![Admin](Frontend/public/screenshots/admin.png)
+**Chatbot Interface** — simple, mobile-friendly chatbot window for user assistance
 
-####  Vendor page
-![Vendor](Frontend/public/screenshots/vendor.png)
 
- ---
+**Responsive Design Layouts** — optimized for both mobile and desktop views
+
+
+## Design Goal
+
+The goal of the design was to make the platform:
+Simple and intuitive for both buyers and sellers
+
+ - Culturally appropriate and bilingual (English & Kinyarwanda)
+
+
+ - Easily navigable with minimal training
+
+
+**Figma Link**
+
+[ WomXchange Figma Prototype](https://www.figma.com/design/wYnkMmCRsebWESppOOi9Uo/WomXchange-Rwanda?node-id=0-1&t=7OiUIMFwJMCC3vBf-1)
 
 ##  Deployment Plan
 
-To bring the E-Commerce application live, I deployed the **frontend** using [Vercel](https://vercel.com) and the **backend** using [Render](https://render.com), both of which provide free-tier hosting and GitHub integration.
+We plan to deploy this project on Render  a cloud platform used for hosting web applications and APIs.
+ Why Render?
+- Easy to use and developer-friendly
 
-###  Backend Deployment – Render
+- Free tier suitable for student and demo projects
 
-- **Platform**: Render – ideal for hosting Node.js servers and PostgreSQL databases.
-- **Steps Taken**:
-  1. Pushed the backend code to a GitHub repository.
-  2. Connected the repo to [Render Dashboard](https://dashboard.render.com/).
-  3. Created a new **Web Service** for the Express server and a **PostgreSQL Database**.
-  4. Added necessary environment variables on Render:
-     - `PORT`
-     - `DATABASE_URL` (from Render’s PostgreSQL instance)
-     - `JWT_SECRET`
-  5. Configured `build command` as:
-     ```
-     npm install && npx sequelize-cli db:migrate
-     ```
-     and `start command` as:
-     ```
-     node server.js
-     ```
-  6. Verified API endpoints using Postman or the browser.
+- Supports automatic deployment from GitHub
 
-###  Frontend Deployment – Vercel
+- Ideal for Node.js backends like this project
 
-- **Platform**: Vercel – perfect for React + TypeScript apps with Vite.
-- **Steps Taken**:
-  1. Pushed the frontend code to GitHub.
-  2. Connected the repo to [Vercel Dashboard](https://vercel.com/dashboard).
-  3. Set the environment variable:
-     - `VITE_API_URL` → Your deployed backend API URL from Render.
-  4. Let Vercel detect the Vite app and deploy automatically.
-  5. Confirmed that all API requests from the frontend were working properly.
+Deployment Plan
+
+Platform: Render
+
+Both Frontend and and client will be hosted on Render
+
+App Type: Web Service (Node.js)
+
 
 > 🔄 Updates to either frontend or backend trigger automatic deployments via GitHub commits.
 
