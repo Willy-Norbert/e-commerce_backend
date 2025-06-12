@@ -1,46 +1,166 @@
-# Getting Started with Create React App
+# 🛒 E-Commerce FullStack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+wXc is a complete **FullStack E-Commerce platform** built with:
+ **Description**
+wXc (Women Exchange) is a modern, full-featured  **E-Commerce platform for clothing and fashion products**, built with a robust **PostgreSQL + Node.js backend** and a responsive **React + TypeScript frontend**. It supports three key user roles:
 
-## Available Scripts
+- **Admins**: Oversee vendors, manage users, track sales and reports
+- **Vendors**: Upload and manage clothing items, handle customer orders
+- **Clients**: Browse fashion items, add to cart, place orders, and track purchases
 
-In the project directory, you can run:
+The platform offers:
+- Secure **JWT-based authentication**
+- **Role-based dashboards** with access control
+- A streamlined **shopping experience** for customers
+- **Order management** for vendors and admins
+- Full **CRUD operations** for products
+- Mobile-friendly, responsive UI
+- Integration-ready with payment gateways future scope
 
-### `npm start`
+- **Backend**: Node.js, Express.js, PostgreSQL using Sequelize ORM
+- **Frontend**: React with TypeScript and Vite
+- **Auth**: JWT-based authentication and role-based access for `Admin`, `Vendor`, and `Client`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The app includes:
+- Full product order flow
+- Admin & Vendor dashboards
+- Protected routes with role restrictions
+- API-integrated React frontend
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🔗 GitHub Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👉 [GitHub Repo Link](https://github.com/your-username/ecommerce-fullstack-app)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Set Up the Development Environment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to run the full project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- **Node.js** (v18+ recommended)
+- **npm** or **yarn**
+- **PostgreSQL** installed and running
+- **Git** installed
+- Optional: **Sequelize CLI** for DB migrations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📦 1. Clone the Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+git clone https://github.com/your-username/ecommerce-clothing-app.git
+cd ecommerce-clothing-app
+```
+```bash
+cd backend
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+```bash
+PORT=5000
+DATABASE_URL=postgresql://username:password@localhost:5432/ecommerce_clothing
+JWT_SECRET=your_super_secret_key
 
-## Learn More
+```
+```bash
+npx sequelize-cli db:migrate
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+```bash
+npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+```
+---
+### Frontend setup
+
+```bash
+cd frontend
+npm install
+
+```
+```bash
+npm run dev
+
+
+```
+---
+##  Designs & Visuals
+
+This section includes the design mockups, UI screenshots, and architecture diagrams used for this e-commerce app.
+
+###  Figma Mockups
+
+> Click the link below to view the full UI design and wireframes:
+- [Figma Mockup](https://www.figma.com/file/your-design-link/ecommerce-clothing-app?type=design&node-id=0%3A1)
+
+---
+
+<!-- Beritha  Make sure you store these images in the `frontend/public/screenshots/` folder and reference them correctly in your repo. -->
+###  App Screenshots
+
+####  Home Page
+![Home](./screenshots/home.png)
+
+####  Product Page
+![Product](./screenshots/product.png)
+
+####  Checkout Page
+![Checkout](./screenshots/checkout.png)
+
+####  Cart Page
+![Cart](./screenshots/cart.png)
+
+####  Admin Dashboard
+![Admin](./screenshots/admin.png)
+
+####  Vendor Dashboard
+![Vendor](./screenshots/vendor.png)
+
+ ---
+
+##  Deployment Plan
+
+To bring the E-Commerce application live, I deployed the **frontend** using [Vercel](https://vercel.com) and the **backend** using [Render](https://render.com), both of which provide free-tier hosting and GitHub integration.
+
+###  Backend Deployment – Render
+
+- **Platform**: Render – ideal for hosting Node.js servers and PostgreSQL databases.
+- **Steps Taken**:
+  1. Pushed the backend code to a GitHub repository.
+  2. Connected the repo to [Render Dashboard](https://dashboard.render.com/).
+  3. Created a new **Web Service** for the Express server and a **PostgreSQL Database**.
+  4. Added necessary environment variables on Render:
+     - `PORT`
+     - `DATABASE_URL` (from Render’s PostgreSQL instance)
+     - `JWT_SECRET`
+  5. Configured `build command` as:
+     ```
+     npm install && npx sequelize-cli db:migrate
+     ```
+     and `start command` as:
+     ```
+     node server.js
+     ```
+  6. Verified API endpoints using Postman or the browser.
+
+###  Frontend Deployment – Vercel
+
+- **Platform**: Vercel – perfect for React + TypeScript apps with Vite.
+- **Steps Taken**:
+  1. Pushed the frontend code to GitHub.
+  2. Connected the repo to [Vercel Dashboard](https://vercel.com/dashboard).
+  3. Set the environment variable:
+     - `VITE_API_URL` → Your deployed backend API URL from Render.
+  4. Let Vercel detect the Vite app and deploy automatically.
+  5. Confirmed that all API requests from the frontend were working properly.
+
+> 🔄 Updates to either frontend or backend trigger automatic deployments via GitHub commits.
+
+---
+
+ The project is now live and accessible via the provided Vercel frontend link, communicating securely with the Render backend and PostgreSQL database.
