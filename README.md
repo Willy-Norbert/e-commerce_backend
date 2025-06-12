@@ -11,37 +11,33 @@ WomXchange Rwanda is a free and easy-to-use online platform designed to help wom
 
 ## Basic Features
 
-1. Seller Dashboard:
+1. Admin Dashboard:
 
-Add, update, and manage product listings.
+- Manage seller registration (approve/reject sellers).
 
-Track and manage orders (pending, fulfilled, cancelled).
+- Monitor product listings and flagged items.
 
-View sales performance and trends.
+- Generate sales and performance reports.
 
-Chatbot for assistance with product and order management.
+2. Seller Dashboard:
 
-Buyer Dashboard:
+- Add, update, and manage product listings.
 
-View and track orders.
+- Track and manage orders (pending, fulfilled, cancelled).
 
-Save products in the wishlist for future purchase.
+- View sales performance and trends.
 
-Manage personal details, delivery addresses, and payment methods.
+- Chatbot for assistance with product and order management.
 
-Chatbot support for order tracking, product queries, etc.
+- Buyer Dashboard:
 
-2. Admin Dashboard:
+- View and track orders.
 
-Manage seller registration (approve/reject sellers).
-
-Monitor product listings and flagged items.
-
-Generate sales and performance reports.
+- Chatbot support for order tracking, product queries, etc.
 
 3. Chatbot:
 
-A fixed, floating component that provides product suggestions, order tracking, and answers to frequently asked questions.
+-A fixed, floating component that provides product suggestions, order   tracking, and answers to frequently asked questions.
 
 4. Payment Integration:
 
@@ -49,11 +45,14 @@ Supports MoMoPay for payments through the MTN MoMo API.
 
 5. Language Support:
 
-Available in both English and Kinyarwanda.
+- Available in both English and Kinyarwanda.
+
+### Tech Stack
 
 - **Backend**: Node.js, Express.js, PostgreSQL using Sequelize ORM
 - **Frontend**: React with TypeScript and Vite
 - **Auth**: JWT-based authentication and role-based access for `Admin`, `Vendor`, and `Client`
+- **Open AI**: api for chartbort
 
 The app includes:
 - Full product order flow
