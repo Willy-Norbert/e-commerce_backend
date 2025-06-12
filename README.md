@@ -2,21 +2,54 @@
 
 ## Description
 WomXchange Rwanda is a free and easy-to-use online platform designed to help women entrepreneurs in Kigali sell their products, manage orders, and grow their businesses. It provides simple tools for both sellers and buyers, including a chatbot for support, product management, order tracking, and an integrated payment system via MoMoPay (Mobile Money). The platform supports both English and Kinyarwanda, making it more accessible to a wide range of users.
- three key user roles:
+ ** Three key user roles:**
  
 
 - **Admins**: Oversee vendors, manage users, track sales and reports
-- **Vendors**: Upload and manage clothing items, handle customer orders
-- **Clients**: Browse fashion items, add to cart, place orders, and track purchases
+- **Vendors**: Upload and manage products and handle customer orders
+- **Clients**: Browse products, add to cart, place orders, and track  purchases
 
-The platform offers:
-- Secure **JWT-based authentication**
-- **Role-based dashboards** with access control
-- A streamlined **shopping experience** for customers
-- **Order management** for vendors and admins
-- Full **CRUD operations** for products
-- Mobile-friendly, responsive UI
-- Integration-ready with payment gateways future scope
+## Basic Features
+
+1. Seller Dashboard:
+
+Add, update, and manage product listings.
+
+Track and manage orders (pending, fulfilled, cancelled).
+
+View sales performance and trends.
+
+Chatbot for assistance with product and order management.
+
+Buyer Dashboard:
+
+View and track orders.
+
+Save products in the wishlist for future purchase.
+
+Manage personal details, delivery addresses, and payment methods.
+
+Chatbot support for order tracking, product queries, etc.
+
+2. Admin Dashboard:
+
+Manage seller registration (approve/reject sellers).
+
+Monitor product listings and flagged items.
+
+Generate sales and performance reports.
+
+3. Chatbot:
+
+A fixed, floating component that provides product suggestions, order tracking, and answers to frequently asked questions.
+
+4. Payment Integration:
+
+Supports MoMoPay for payments through the MTN MoMo API.
+
+5. Language Support:
+
+Available in both English and Kinyarwanda.
 
 - **Backend**: Node.js, Express.js, PostgreSQL using Sequelize ORM
 - **Frontend**: React with TypeScript and Vite
